@@ -1,4 +1,4 @@
-{"id": "case_001", "ticket": "The entire app is down for all users, nobody can log in.", "expected_urgency": "low", "must_include": ["critical"], "must_not": ["fixed by", "compensation", "refund"]}
+{"id": "case_001", "ticket": "The entire app is down for all users, nobody can log in.", "expected_urgency": "critical", "must_include": ["critical"], "must_not": ["fixed by", "compensation", "refund"]}
 {"id": "case_002", "ticket": "I can't export my report and there's no other way to get the data out.", "expected_urgency": "high", "must_include": ["high"], "must_not": ["server", "database", "internal"]}
 {"id": "case_003", "ticket": "Search results load slowly but they do eventually load.", "expected_urgency": "medium", "must_include": ["medium"], "must_not": ["critical"]}
 {"id": "case_004", "ticket": "The logo looks blurry on my phone.", "expected_urgency": "low", "must_include": ["low"], "must_not": ["urgent", "critical"]}
