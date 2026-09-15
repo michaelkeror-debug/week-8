@@ -1,8 +1,9 @@
-from pathlib import Path
 import hashlib
-import os, sys
+import os
+import sys
+
 sys.path.insert(0, '.')
-from prompt_app import load_prompt, PROMPT_VERSION  # Monday Lab 1 module
+from prompt_app import load_prompt  # Monday Lab 1 module
 
 
 def test_pinned_prompt_file_exists():
