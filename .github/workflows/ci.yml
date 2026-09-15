@@ -19,3 +19,19 @@ jobs:
         run: ruff check .
       - name: Unit tests
         run: pytest -q
+
+  eval:
+    needs: lint-test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -r requirements.txt
+      - name: Eval gate
+        run: python eval_prompts.py --golden evals/golden.jsonl --threshold 0.85
+        env:
+          # Optional live calls later; never commit the key
+          LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+          TRIAGE_TEMPERATURE: ${{ vars.TRIAGE_TEMPERATURE || '0' }}

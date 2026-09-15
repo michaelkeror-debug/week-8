@@ -3,7 +3,11 @@
 Loads the pinned prompt, hashes it, looks up fixtures/responses/<sha>.json.
 Fails closed if no fixture exists for that sha. Prints prompt_version and sha.
 """
-import argparse, hashlib, json, os, sys
+import argparse
+import hashlib
+import json
+import os
+import sys
 from pathlib import Path
 
 

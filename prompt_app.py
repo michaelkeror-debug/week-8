@@ -1,6 +1,8 @@
 """AfyaPlus triage API, with the versioned prompt reported on /health."""
-import hashlib, os
+import hashlib
+import os
 from pathlib import Path
+
 from fastapi import FastAPI
 from pydantic import BaseModel, Field
 
