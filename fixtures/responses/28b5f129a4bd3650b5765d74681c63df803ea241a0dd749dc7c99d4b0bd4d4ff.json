@@ -1,0 +1,25 @@
+
+{
+  "by_id": {
+    "case_001": {
+      "expected_urgency": "critical",
+      "text": "Urgency: critical. This affects all users and blocks core login functionality right now."
+    },
+    "case_002": {
+      "expected_urgency": "high",
+      "text": "Urgency: high. The user is blocked from exporting data with no available workaround."
+    },
+    "case_003": {
+      "expected_urgency": "medium",
+      "text": "Urgency: medium. Search is degraded but still usable while results load slowly."
+    },
+    "case_004": {
+      "expected_urgency": "low",
+      "text": "Urgency: low. This is a cosmetic display issue with the logo on mobile."
+    },
+    "case_005": {
+      "expected_urgency": "low",
+      "text": "Urgency: low. This is a feature request for a dark mode option rather than a defect."
+    }
+  }
+}
