@@ -1,4 +1,4 @@
-"""Route a: MCP health is a client handshake, not an HTTP port.
+"""Route A: MCP health is a client handshake, not an HTTP port.
 
 Initialise, list_tools(), read version://current, assert check_stock and semver.
 The stdio MCP from Monday has no port and no /health route.
