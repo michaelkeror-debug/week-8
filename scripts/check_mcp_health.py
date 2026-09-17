@@ -28,6 +28,26 @@ async def handshake() -> int:
 
         tools = {tool.name for tool in (await session.list_tools()).tools}
         version = await session.read_resource("version://current")
+        contents = getattr(version, "contents", version)
+
+        # normalize to a list
+        if not isinstance(contents, list):
+            contents = [contents]
+
+        version_text = None
+        for item in contents:
+            if hasattr(item, "text"):
+                version_text = item.text
+                break
+
+        if version_text is None:
+            version_text = str(contents)
+
+        print("tools", sorted(tools), "version", version_text)
+
+        if not version_text.startswith("1."):
+            print("invalid version", version_text)
+            return 1
         text = getattr(version, "contents", version)
 
         print("tools", sorted(tools), "version", text)
