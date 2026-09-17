@@ -28,7 +28,7 @@ def version_current() -> str:
 
 
 @mcp.tool()
-def stock_check(clinic_id: str, item: str) -> dict:
+def check_stock(clinic_id: str, item: str) -> dict:
     """Check stock of a medical item at one clinic. Schema unchanged since 1.0.0."""
     clinic = CLINICS.get(clinic_id)
     if clinic is None:
